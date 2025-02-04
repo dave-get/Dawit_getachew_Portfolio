@@ -19,12 +19,20 @@ const Sidenote = () => {
     []
   );
 
+  const setTextRef = (el: HTMLParagraphElement | null, index: number) => {
+    if (el) {
+      textRefs.current[index] = el;
+    }
+  };
+
   useEffect(() => {
     setTimeout(() => {
       const positions = textRefs.current.map((ref) => {
         if (ref) {
           const rect = ref.getBoundingClientRect();
-          return rect.top - ref.parentElement!.getBoundingClientRect().top;
+          return (
+            rect.top - (ref.parentElement?.getBoundingClientRect().top || 0)
+          );
         }
         return 0;
       });
@@ -54,7 +62,7 @@ const Sidenote = () => {
                   : "#94a3b8",
             }}
             animate={{
-              scale: hoveredIndex === index ? 1 : 1,
+              scale: hoveredIndex === index ? 1.1 : 1,
             }}
             transition={{ duration: 0.3 }}
           />
@@ -64,7 +72,7 @@ const Sidenote = () => {
       {texts.map((text, index) => (
         <motion.p
           key={index}
-          ref={(el) => (textRefs.current[index] = el)}
+          ref={(el) => setTextRef(el, index)}
           onHoverStart={() => setHoveredIndex(index)}
           onHoverEnd={() => setHoveredIndex(null)}
           className="cursor-pointer text-gray-600 dark:text-gray-400"
@@ -79,7 +87,7 @@ const Sidenote = () => {
                 : "#666666",
           }}
           animate={{
-            scale: hoveredIndex === index ? 1 : 1,
+            scale: hoveredIndex === index ? 1.05 : 1,
           }}
           transition={{ duration: 0.3 }}
         >
