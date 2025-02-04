@@ -59,7 +59,8 @@ export default {
 			julee: ["var(--font-julee)"],
 			keania: ["var(--font-Keania_One)"],
 			bungee: ["var(--font-Bungee)"],
-			smooch: ["var(--font-Smooch_Sans)"]
+			smooch: ["var(--font-Smooch_Sans)"],
+			inter: ["var(--font-inter)"]
 
   		},
   		backgroundColor: {

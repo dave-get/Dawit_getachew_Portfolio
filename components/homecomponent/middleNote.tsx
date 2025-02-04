@@ -7,7 +7,7 @@ const MiddleNote = () => {
   const words1 = sentence1.split(" ").map((word) => {
     return {
       text: word,
-      className: "font-smooch text-white/40 text-sm md:text-lg ",
+      className: "font-smooch dark:text-white/40 text-sm md:text-lg ",
     };
   });
 
@@ -16,11 +16,11 @@ const MiddleNote = () => {
       <p className="text-center font-keania text-3xl text-[#EB9C9C]">
         DAWIT GETACHEW
       </p>
-      <p className="font-bungee font-bold border border-dashed border-white/10 text-slate-400 text-md md:text-2xl text-center">
+      <p className="font-bungee font-bold border border-dashed border-black/50 dark:border-white/10 text-slate-400 text-md md:text-2xl text-center">
         Computer Science and Engineering, Competitive programmer, frontend
         developer, UI/UX designer.
       </p>
-      <div className="border border-dashed border-white/10 py-2 px-6">
+      <div className="border border-dashed border-black/50 dark:border-white/10 py-2 px-6">
         <TypewriterEffect words={words1} />
       </div>
     </div>
