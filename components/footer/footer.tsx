@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import {
   FaInstagram,
@@ -46,22 +47,30 @@ const Footer = () => {
           dave{isHovered ? "waanofii" : "★★★"}@gmail.com
         </p>
         <div className="flex space-x-4 justify-center items-center">
-          <FaInstagram
-            className="text-[#AF8C8C] hover:text-black hover:dark:text-white transition duration-300"
-            size={20}
-          />
-          <FaTelegram
-            className="text-[#AF8C8C] hover:text-black hover:dark:text-white transition duration-300"
-            size={20}
-          />
-          <FaLinkedin
-            className="text-[#AF8C8C] hover:text-black hover:dark:text-white transition duration-300"
-            size={20}
-          />
-          <FaFacebook
-            className="text-[#AF8C8C] hover:text-black hover:dark:text-white transition duration-300"
-            size={20}
-          />
+          <Link href="https://www.instagram.com/dawit_getachew.1/">
+            <FaInstagram
+              className="text-[#AF8C8C] hover:text-black hover:dark:text-white transition duration-300"
+              size={20}
+            />
+          </Link>
+          <Link href="https://t.me/GetD1">
+            <FaTelegram
+              className="text-[#AF8C8C] hover:text-black hover:dark:text-white transition duration-300"
+              size={20}
+              />
+          </Link>
+          <Link href="https://www.linkedin.com/in/dawit-getachew-291067233/">
+            <FaLinkedin
+              className="text-[#AF8C8C] hover:text-black hover:dark:text-white transition duration-300"
+              size={20}
+            />
+          </Link>
+          <Link href="https://web.facebook.com/dave.getachew.165/">
+            <FaFacebook
+              className="text-[#AF8C8C] hover:text-black hover:dark:text-white transition duration-300"
+              size={20}
+            />
+          </Link>
         </div>
         <p className="text-slate-500 ">@Dawit-getachew &copy;2025</p>
       </div>
