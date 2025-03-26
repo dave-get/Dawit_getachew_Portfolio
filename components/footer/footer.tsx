@@ -18,7 +18,7 @@ const Footer = () => {
     setIsHovered(false);
   };
   return (
-    <div className="flex flex-col w-full justify-center items-center px-10 py-10 mt-32 dark:bg-[#123453] border-t border-t-slate-700/10">
+    <div className="flex flex-col w-full justify-center items-center px-10 py-10 mt-5 dark:bg-[#123453] border-t border-t-slate-700/10">
       <div>
         <Image
           src="/image/logo.svg"
